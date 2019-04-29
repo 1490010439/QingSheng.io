@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>情圣图书管理系统</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 <meta charset="UTF-8">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/tushulist.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/npm.js" ></script>
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<script type="text/javascript" src="js/tushulist.js" ></script>
+
+	
+	</head>
+	<body style="padding: 10px;">
+		
+		<!--提示模态框 -->
+		<div class="modal fade" id="mytishiModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<center>
+							<h3 style="color: #EF6A6C;">提示<h3>
+								<hr/>
+							<h4 id="mytishi">萌萌哒！并没有搜索到任何东西！</h4>
+					</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<center style="margin-top: 15px;">
+			<h2>图书列表 </h2>
+			<br/>
+ 			<input type="text"/>
+ 			<button class="mybutton" style="width: 70px;height: 20px; " onclick="myshousuo()">搜索</button>
+			&nbsp;&nbsp;&nbsp;
+			<button class="mybutton" style="width: 70px;height: 20px; " onclick="myxiugai()">修改</button>
+			&nbsp;
+			<button class="mybutton" style="width: 70px;height: 20px; " onclick="mydelete()">删除</button>
+			<hr/>
+	
+		
+		</center>
+		<table class="layui-hide" id="test"></table>
+			
+		    	<script>
+				layui.use('table', function(){
+				  var table = layui.table;
+				  
+				  table.render({
+				    elem: '#test'
+				    ,url:'./data/tushu.json'
+				    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+				    ,cols: [[
+				      {field:'id', width:80, title: 'ID', sort: true,width: '10%'}
+				      ,{field:'bookname', width:150, title: '图书名称',width: '10%'}
+				      ,{field:'bookzuozhe', width:100, title: '图书作者', sort: true,width: '10%'}
+				      ,{field:'bookcbs', width:100, title: '图书出版社',width: '10%'}
+				      ,{field:'booktitle',width:150, title: '图书简介', width: '20%', minWidth: 100} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+				      ,{field:'bookjiage',width:100, title: '图书价格', sort: true,width: '8%'}
+				      ,{field:'bookzongkucun',width:120, title: '总库存', sort: true,width: '10%'}
+				      ,{field:'bookjieyue',width:120, title: '借阅量',sort: true,width: '7%'}
+				      ,{field:'bookdqkucun', width:137, title: '当前库存', sort: true,width: '10%'},
+							,{field:'bookdqcaozuo', width:60, title: '<input type=\"checkbox\" id=\"myquanxuan\" />',width: '5%'}
+				    ]]
+				  });
+				});
+			</script>
+		
+			
+			<center style="clear:both;" name="myli">
+			<ul class="myli">
+				<li>
+					<a href="#myli" aria-label="Previous" class="mylia" style="border-radius: 3px; width: 25px;">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li><a href="#myli" class="mylia">1</a></li>
+				<li><a href="#myli" class="mylia">2</a></li>
+				<li><a href="#myli" class="mylia">3</a></li>
+				<li><a href="#myli" class="mylia">4</a></li>
+				<li><a href="#myli" class="mylia">5</a></li>
+				<li>
+					<a href="#myli" aria-label="Next" class="mylia" style="border-radius: 3px;  border-right: 1px #CCC solid; width: 25px;">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			</ul>
+			
+			<button class="mybutton" style="width: 100px;height: 30px;">
+				更多图书
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			</button>
+			
+		</center>	
+	</body>
+</html>

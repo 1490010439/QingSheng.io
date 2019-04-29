@@ -1,0 +1,67 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 10,
+	"data": [
+		{
+			"studentid": 20160304001,
+			"studentname": "钟盛勤",
+			"studentclass": "软件02班",
+			"studentbook": "java编程思想",
+			"starttime": "20180901",
+			"endtime": "20180930",
+			"state": "已归还",
+			"caozuo":"<input type=\"checkbox\" />"
+		}, 
+	    {
+			"studentid": 20160304002,
+			"studentname": "钟馗",
+			"studentclass": "软件04班",
+			"studentbook": "c语言",
+			"starttime": "20181001",
+			"endtime": "20181030",
+			"state": "未归还",
+			"caozuo":"<input type=\"checkbox\" />"
+		},{
+			"studentid": 20160304001,
+			"studentname": "钟盛勤",
+			"studentclass": "软件02班",
+			"studentbook": "java编程思想",
+			"starttime": "20180901",
+			"endtime": "20180930",
+			"state": "已归还",
+			"caozuo":"<input type=\"checkbox\" />"
+		}, 
+	    {
+			"studentid": 20160304002,
+			"studentname": "钟馗",
+			"studentclass": "软件04班",
+			"studentbook": "c语言",
+			"starttime": "20181001",
+			"endtime": "20181030",
+			"state": "未归还",
+			"caozuo":"<input type=\"checkbox\" />"
+		},
+		{
+			"studentid": 20160304001,
+			"studentname": "钟盛勤",
+			"studentclass": "软件02班",
+			"studentbook": "java编程思想",
+			"starttime": "20180901",
+			"endtime": "20180930",
+			"state": "已归还",
+			"caozuo":"<input type=\"checkbox\" />"
+		}, 
+	    {
+			"studentid": 20160304002,
+			"studentname": "钟馗",
+			"studentclass": "软件04班",
+			"studentbook": "c语言",
+			"starttime": "20181001",
+			"endtime": "20181030",
+			"state": "未归还",
+			"caozuo":"<input type=\"checkbox\" />"
+		}
+	
+	]
+}

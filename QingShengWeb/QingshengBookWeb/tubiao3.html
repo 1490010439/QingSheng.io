@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图书大数据</title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript" src="Chart.js/Chart.js" ></script>
+		<script type="text/javascript" src="Chart.js/Chart.bundle.js" ></script>
+		<script type="text/javascript" src="Chart.js/utils.js" ></script>
+	</head>
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+		.chart-container {
+			width: 500px;
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+		.container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	</style>
+	<body>
+		<center style="margin-top: 15px;">
+		<h2>图书大数据 </h2>
+		<hr/>
+		<div class="container">
+		<div class="chart-container">
+			<canvas id="chart-legend-top"></canvas>
+		</div>
+		<div class="chart-container">
+			<canvas id="chart-legend-right"></canvas>
+		</div>
+		<div class="chart-container">
+			<canvas id="chart-legend-bottom"></canvas>
+		</div>
+		<div class="chart-container">
+			<canvas id="chart-legend-left"></canvas>
+		</div>
+	    </div>
+	    </center>
+	    <br/>
+	    <br/>
+	<script>
+		var color = Chart.helpers.color;
+		function createConfig(legendPosition, colorName) {
+			return {
+				type: 'line',
+				data: {
+					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+					datasets: [{
+						label: '图书数据',
+						data: [
+							randomScalingFactor(),
+							randomScalingFactor(),
+							randomScalingFactor(),
+							randomScalingFactor(),
+							randomScalingFactor(),
+							randomScalingFactor(),
+							randomScalingFactor()
+						],
+						backgroundColor: color(window.chartColors[colorName]).alpha(0.5).rgbString(),
+						borderColor: window.chartColors[colorName],
+						borderWidth: 1
+					}]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						position: legendPosition,
+					},
+					scales: {
+						xAxes: [{
+							display: true,
+							scaleLabel: {
+								display: true,
+								labelString: 'Month'
+							}
+						}],
+						yAxes: [{
+							display: true,
+							scaleLabel: {
+								display: true,
+								labelString: 'Value'
+							}
+						}]
+					},
+					title: {
+						display: true,
+						text:legendPosition
+					}
+				}
+			};
+		}
+
+		window.onload = function() {
+			[{
+				id: 'chart-legend-top',
+				legendPosition: '图书的借出量变化',
+				color: 'red'
+			}, {
+				id: 'chart-legend-right',
+				legendPosition: '图书的出入库变化',
+				color: 'blue'
+			}, {
+				id: 'chart-legend-bottom',
+				legendPosition: '图书的借出天数变化',
+				color: 'green'
+			}, {
+				id: 'chart-legend-left',
+				legendPosition: '图书的欢迎程度变化',
+				color: 'yellow'
+			}].forEach(function(details) {
+				var ctx = document.getElementById(details.id).getContext('2d');
+				var config = createConfig(details.legendPosition, details.color);
+				new Chart(ctx, config);
+			});
+		};
+	</script>
+	
+	</body>
+</html>

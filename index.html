@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>个人简历</title>
+	  <link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/gungdong.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		
+
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="0"
+     style="overflow:auto; position: relative;">
+     <!--背景图片-->
+     <div id="bg"><img id="myimg" src="img/xinbg01.jpg"  class="img-responsive" alt="Cinque Terre"></div>
+  
+	
+<!--导航-->
+<div id="mydaohan" style="position: fixed;width: 100%;z-index: 999;top: 0px;left: 0px;">
+<nav id="myScrollspy" class="navbar navbar-default navbar-static" role="navigation" style="padding: 0px;border-radius: 0px;">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse"
+                data-target=".bs-js-navbar-scrollspy">
+           <!--头像-->
+				<img id="SilderMeanTouxiang" src="img/touxiang.jpg" alt="头像" width="25px" height="25px">
+        </button>
+        <a class="navbar-brand active" href="#">
+				  个人简历
+				</a>
+    </div>
+    <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+        <ul class="nav navbar-nav">
+            <li><a href="#jianglidiv">我的项目</a></li>
+						
+						<li class="dropdown">
+						<a href="#" id="navbarDrop1" class="dropdown-toggle" 
+							 data-toggle="dropdown">
+							 项目
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu" role="menu" 
+							aria-labelledby="navbarDrop1">
+							<li><a href="#" tabindex="-1">C语言</a></li>
+							<li><a href="#" tabindex="-1">Java</a></li>
+							<li><a href="#" tabindex="-1">Android</a></li>
+							<li><a href="#" tabindex="-1">SSM项目</a></li>
+							<li><a href="#" tabindex="-1">SpringCloud</a></li>
+						</ul>
+					  </li>
+						
+						
+            <li><a href="#xiangmudiv">我的课程</a></li>
+
+						<li class="dropdown">
+							<a href="#" id="navbarDrop1" class="dropdown-toggle" 
+								data-toggle="dropdown">
+								课程
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" 
+								aria-labelledby="navbarDrop1">
+								<li><a href="#" tabindex="-1">算法与数据结构</a></li>
+								<li><a href="#" tabindex="-1">设计模式</a></li>
+								<li><a href="#" tabindex="-1">软件工程</a></li>
+								<li><a href="#" tabindex="-1">UML图</a></li>
+							</ul>
+						</li>
+						
+						
+            <li><a href="#jmeterdiv">我的网页</a></li>
+						
+						<li class="dropdown">
+							<a href="#" id="navbarDrop1" class="dropdown-toggle" 
+								data-toggle="dropdown">
+								网页
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" 
+								aria-labelledby="navbarDrop1">
+								<li><a href="#" tabindex="-1">网页1</a></li>
+								<li><a href="#" tabindex="-1">网页2</a></li>
+								<li><a href="#" tabindex="-1">网页3</a></li>
+								<li><a href="#" tabindex="-1">网页4</a></li>
+							</ul>
+						</li>
+						
+						
+            <li><a href="#ejb" >我的爱好</a></li>
+						
+						<li class="dropdown">
+							<a href="#" id="navbarDrop1" class="dropdown-toggle" 
+								data-toggle="dropdown">
+								爱好
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" 
+								aria-labelledby="navbarDrop1">
+								<li><a href="#" tabindex="-1">音乐</a></li>
+								<li><a href="#" tabindex="-1">绘画</a></li>
+							</ul>
+						</li>
+						
+            <li><a href="#spring">其他</a></li>
+        </ul>
+    </div>
+    </div> 
+</nav>
+</div>	
+
+
+<!--主面板-->
+<div style="padding-top: 60px;">
+	
+		<!--简历面板-->  
+    <div class="section" 
+    	style="width: 100%; height: 700px;padding-top: 20px;">
+			<div id="jianglidiv">
+				
+				<!--弹幕--> 
+				 <div id="dm" style="position:absolute; left: 0px; right: 0px;z-index: -55;">
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+            <font color="#CC99FF" id="10">JAVA天下第一！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="7">
+            <font color="#0099FF" id="11">PHP是世上最好的语言！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+            <font color="#FF89CC" id="12">万物皆对象！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%;" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="4">
+            <font color="#CC05FF" id="13">封装 继承 多态！</font>
+            </marquee>
+            
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="3">
+            <font color="#CC9923" id="14">我是一只快乐的程序猿！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="7">
+            <font color="#CC8921" id="15">你是我这一生都编译不完的程序！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+            <font color="#FF94CC" id="16">HELLO WORLD！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="4">
+            <font color="#CC55CC" id="17">小爬虫哦，爬呀爬！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="5">
+            <font color="#FF11CC" id="18">大数据时代！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="9">
+            <font color="#CC0055" id="19">面向界面编程！</font>
+            </marquee>
+
+          </div>
+				
+				
+				<center>
+					<img  src="img/touxiang.jpg" alt="头像" 
+					class="img-circle animated bounceInLeft" width="150px" height="150px"/>
+					
+					<div class="container-fluid animated bounceInRight" style="padding-top: 20px;">
+						<div class="row">
+							<div class="col-xs-8 col-sm-6 col-md-4 col-xs-offset-2 col-xs-offset-3 col-md-offset-4">
+								<ul class="list-group">
+								<li class="list-group-item">姓名：钟盛勤</li>
+								<li class="list-group-item">英文名：Sach Zhong</li>
+								<li class="list-group-item">号码：15616902209</li>
+								<li class="list-group-item">邮箱：1490010439@qq.com</li>
+								<li class="list-group-item">天道酬勤</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</center>
+				
+				<!--鱼--> 
+				<div id="yu">
+				<marquee behavior="scroll" direction="right" width="100%" height="30px;" loop="-1" scrollamount="22">
+				<img src="img/yu1.png" width="60px" height="30px">
+				</marquee>
+				
+				<marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1" scrollamount="15">
+				<img src="img/yu2.png" width="60px" height="30px">
+				</marquee>
+				
+				<marquee behavior="scroll" direction="right" width="100%" height="30px;" loop="-1" scrollamount="10">
+				<img src="img/yu3.png" width="60px" height="30px">
+				</marquee>
+				
+				<marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1" scrollamount="9">
+				<img src="img/yu4.png" width="60px" height="30px">
+				</marquee>
+				
+				<marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1" scrollamount="5">
+				<img src="img/yu5.png" width="60px" height="30px">
+				</marquee>
+				
+				<marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1" scrollamount="17">
+				<img src="img/yu6.png" width="60px" height="30px">
+				</marquee>
+				</div>
+				
+			</div>	
+    </div>
+		
+		<!--项目面板-->  
+    <div class="section"
+    	style="width: 100%; background-color:rgba(53,33,20,0.4);">
+       <div id="xiangmudiv">
+				 <center style="padding-top: 30px;">
+						<h2 style="color: #F5F5F5;">我的项目</h2>
+						<hr/>
+						<div class="container-fluid">
+							<div class="row">
+								
+								<div class="col-sm-6 col-md-4" style="padding-top: 10px;border-bottom: 1px #F2DEDE solid;">
+									<div>
+										<img  src="img/136.jpg" alt="C">
+										<div class="caption">
+											<h3 style="color: #F7F7F7;">C 语言项目</h3>
+											<p style="color: #FCF8E3;">本项目，采用c语言实现XXX,完成了XXX模块，从中收获了XXX</p>
+											<p>
+												<a href="#">
+													<button class="mybutton" style="width: 100px;height: 30px;">
+														查看
+													</button>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-6 col-md-4" style="padding-top: 10px;border-bottom: 1px #F2DEDE solid;">
+									<div>
+										<img  src="img/137.jpg" alt="java">
+										<div class="caption">
+											<h3 style="color: #F7F7F7;">JAVA项目</h3>
+											<p style="color: #FCF8E3;">本项目，采用java语言实现XXX,完成了XXX模块，从中收获了XXX</p>
+											<p>
+												<a href="#">
+													<button class="mybutton" style="width: 100px;height: 30px;">
+														查看
+													</button>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-6 col-md-4" style="padding-top: 10px;border-bottom: 1px #F2DEDE solid;">
+									<div>
+										<img  src="img/153.jpg" alt="android">
+										<div class="caption">
+											<h3 style="color: #F7F7F7;">Android项目</h3>
+											<p style="color: #FCF8E3;">本项目，采用android语言实现XXX,完成了XXX模块，从中收获了</p>
+											<p>
+												<a href="#">
+													<button class="mybutton" style="width: 100px;height: 30px;">
+														查看
+													</button>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-6 col-md-4" style="padding-top: 10px;border-bottom: 1px #F2DEDE solid;">
+									<div>
+										<img  src="img/144.jpg" alt="ssm">
+										<div class="caption">
+											<h3 style="color: #F7F7F7;">ssm项目</h3>
+											<p style="color: #FCF8E3;">本项目，采用springboot mybatis springmvc实现XXX,完成了XXX模块，从中收获了XXX</p>
+											<p>
+												<a href="#">
+													<button class="mybutton" style="width: 100px;height: 30px;">
+														查看
+													</button>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-4" style="padding-top: 10px;border-bottom: 1px #F2DEDE solid;">
+									<div>
+										<img  src="img/152.jpg" alt="springcloud">
+										<div class="caption">
+											<h3 style="color: #F7F7F7;">SpringCloud项目</h3>
+											<p style="color: #FCF8E3;">本项目，采用SpringCloud实现XXX,完成了XXX模块，从中收获了XXX</p>
+											<p>
+												<a href="#">
+													<button class="mybutton" style="width: 100px;height: 30px;">
+														查看
+													</button>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-6 col-md-4" style="padding-top: 10px;border-bottom: 1px #F2DEDE solid;">
+									<div>
+										<img  src="img/148.jpg" alt="qita">
+										<div class="caption">
+											<h3 style="color: #F7F7F7;">更多项目</h3>
+											<p style="color: #FCF8E3;">查看更多项目<br/><br/></p>
+											<p>
+												<a href="#">
+													<button class="mybutton" style="width: 100px;height: 30px;">
+														查看
+													</button>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+				
+				</center>
+		</div>	
+    </div>
+		
+		<!--课程面板-->  
+    <div class="section"
+    	style="width: 100%;background-color:rgba(12,0,45,0.6);">
+      <div id="jmeterdiv" >
+				  <!--轮播图-->
+					  <div>
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								
+								<div class="item active">
+									<center style="padding-top: 20px;">
+										<h2 style="color: #F5F5F5;">我的课程</h2>
+										<h4 style="color: #F5F5F5;">算法</h4>
+										<hr/>
+										<p style="color: #E1EDF7;padding-left: 10%;padding-right: 10%;">
+											算法（Algorithm）是指解题方案的准确而完整的描述，是一系列解决问题的清晰指令，算法代表着用系统的方法描述解决问题的策略机制。也就是说，能够对一定规范的输入，在有限时间内获得所要求的输出。如果一个算法有缺陷，或不适合于某个问题，执行这个算法将不会解决这个问题。不同的算法可能用不同的时间、空间或效率来完成同样的任务。一个算法的优劣可以用空间复杂度与时间复杂度来衡量。算法中的指令描述的是一个计算，当其运行时能从一个初始状态和（可能为空的）初始输入开始，经过一系列有限而清晰定义的状态，最终产生输出并停止于一个终态。一个状态到另一个状态的转移不一定是确定的。随机化算法在内的一些算法，包含了一些随机输入。形式化算法的概念部分源自尝试解决希尔伯特提出的判定问题，并在其后尝试定义有效计算性或者有效方法中成形。
+										</p>
+										<a href="#">
+											<button class="mybutton" style="width: 100px;height: 30px;">
+												查看相应项目
+											</button>
+										</a>
+										<br/>
+										<br/>
+									</center>
+								</div>
+								
+								<div class="item">
+									<center style="padding-top: 20px;">
+										<h2 style="color: #F5F5F5;">我的课程</h2>
+										<h4 style="color: #F5F5F5;">设计模式</h4>
+										<hr/>
+										<p style="color: #E1EDF7;padding-left: 10%;padding-right: 10%;">
+											设计模式（Design pattern）代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案。这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。
+设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。项目中合理地运用设计模式可以完美地解决很多问题，每种模式在现实中都有相应的原理来与之对应，每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是设计模式能被广泛应用的原因。
+										</p>
+										<a href="#">
+											<button class="mybutton" style="width: 100px;height: 30px;">
+												查看相应项目
+											</button>
+										</a>
+										<br/>
+										<br/>
+									</center>
+								</div>
+								
+								
+								<div class="item">
+									<center style="padding-top: 20px;">
+										<h2 style="color: #F5F5F5;">我的课程</h2>
+										<h4 style="color: #F5F5F5;">软件工程</h4>
+										<hr/>
+										<p style="color: #E1EDF7;padding-left: 10%;padding-right: 10%;">
+											软件工程是一门研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。它涉及程序设计语言、数据库、软件开发工具、系统平台、标准、设计模式等方面。
+在现代社会中，软件应用于多个方面。典型的软件有电子邮件、嵌入式系统、人机界面、办公套件、操作系统、编译器、数据库、游戏等。同时，各个行业几乎都有计算机软件的应用，如工业、农业、银行、航空、政府部门等。这些应用促进了经济和社会的发展，也提高了工作效率和生活效率 。
+									  </p>
+										<a href="#">
+											<button class="mybutton" style="width: 100px;height: 30px;">
+												查看相应项目
+											</button>
+										</a>
+										<br/>
+										<br/>
+									</center>
+								</div>
+								
+								
+								<div class="item">
+									<center style="padding-top: 20px;">
+										<h2 style="color: #F5F5F5;">我的课程</h2>
+										<h4 style="color: #F5F5F5;">UML</h4>
+										<hr/>
+										<p style="color: #E1EDF7;padding-left: 10%;padding-right: 10%;">
+											Unified Modeling Language (UML)又称统一建模语言或标准建模语言，是始于1997年一个OMG标准，它是一个支持模型化和软件系统开发的图形化语言，为软件开发的所有阶段提供模型化和可视化支持，包括由需求分析到规格，到构造和配置。 面向对象的分析与设计(OOA&D，OOAD)方法的发展在80年代末至90年代中出现了一个高潮，UML是这个高潮的产物。它不仅统一了Booch、Rumbaugh和Jacobson的表示方法，而且对其作了进一步的发展，并最终统一为大众所接受的标准建模语言。UML规范用来描述建模的概念有，类（对象的）、对象、关联、职责、行为、接口、用例、包、顺序、协作，以及状态。
+									 </p>
+										<a href="#">
+											<button class="mybutton" style="width: 100px;height: 30px;">
+												查看相应项目
+											</button>
+										</a>
+										<br/>
+										<br/>
+									</center>
+								</div>
+								
+				 
+							</div>
+						
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							</a>
+						</div>
+						
+					</div>
+		  </div>
+    </div>
+		
+		
+    <div class="section"
+    	style="width: 100%; height: 500px;">
+       <h4 id="ejb">EJB</h4>
+       <div id="ejbdiv" style="display: none;">
+				<center>
+					<img src="img/153.jpg" class="animated bounceInLeft" />
+				</center>
+		</div>
+    </div>
+	
+	
+    <div class="section"
+    	style="width: 100%; height: 700px;background-color:rgba(60,15,10,0.6);margin-bottom:-10px;">
+      <h4 id="spring">Spring</h4>
+       <div id="springdiv" style="display: none;">
+				<center>
+					<img src="img/152.jpg" class="animated bounceInLeft" />
+				</center>
+		</div>
+    </div>
+	
+	<!--回到顶部-->
+	<div style="position:fixed; right:10px; bottom:10px;">
+		<a href="#">
+			<span class="glyphicon glyphicon-eject" aria-hidden="true"></span>
+		</a>
+	</div>
+	
+</div>
+
+
+
+
+
+<script>
+    $(function(){
+        removeSection = function(e) {
+            $(e).parents(".section").remove();
+            $('[data-spy="scroll"]').each(function () {
+                var $spy = $(this).scrollspy('refresh')
+            });
+        }
+        $("#myScrollspy").scrollspy();
+        $('#myScrollspy').on('activate.bs.scrollspy', function () {
+            var currentItem = $(".nav li.active > a").text();
+            //$("#activeitem").html("查看位置 - " + currentItem);
+ 
+        })
+    });
+</script>
+
+<div id="myWebToshi" class="animated bounceInDown" onclick="CloseToshi()">
+	<span id="myWebToshiText">正在加载</span>
+</div>
+
+</body>
+</html>

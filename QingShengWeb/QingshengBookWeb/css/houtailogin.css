@@ -1,0 +1,50 @@
+#bg
+{
+	background-image: url(../img/bg1.jpg);
+	width: 100%;
+	height:1000px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: -2;
+	opacity: 1;
+}
+
+.mybutton
+{
+	text-decoration: none;
+	color: #FFF;
+	width: 100px;
+	height: 33px;
+	background-color: rgba(103,113,204,0);
+	border: 1px solid rgba(255,255,255,1);
+ 	border-radius: 3px;
+ 	box-shadow: 3px 3px 3px  rgba(123,123,255,0.7);
+}
+.mybutton:hover
+{
+	text-decoration: none;
+	color: #101010;
+	border: 1px solid rgba(0,0,0,1);		
+	background-color: rgba(103,113,204,1);	
+	box-shadow: 3px 3px 3px  rgba(123,123,255,0.7);
+}
+
+.mybutton:active
+{
+	text-decoration: none;
+	color: #CCCCCC;
+	border: 1px solid rgba(255,255,255,1);		
+	background-color: rgba(103,113,204,0.3);	
+	box-shadow: 3px 3px 3px  rgba(123,123,255,0.3);
+}
+
+.myinput
+{
+	color: #FFF9EC;
+	border: 1px solid rgba(255,255,255,1);
+	border-radius: 3px;
+	height: 30px;		
+	background-color: rgba(103,113,204,0.1);	
+	box-shadow: 3px 3px 3px  rgba(123,123,255,0.7);
+}

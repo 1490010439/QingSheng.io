@@ -1,0 +1,153 @@
+
+
+#TouXiang
+{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+#Title
+{
+	color: rgba(255,255,255,1);
+	text-align: center;
+}
+
+#TouxiangBg
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url(../img/bg3.gif);
+	width: 100%;
+	height: 150px;
+	z-index: 1;
+}
+
+#SilderMeanTouxiang
+{
+	position: absolute;
+	top: 20px;
+	left: 60px;
+	z-index: 2;
+	
+}
+
+#SilderMeanUserName
+{
+	position: absolute;
+	top: 90px;
+	left: 10px;
+	font-size: 1.5em;
+	z-index: 2;
+}
+#SilderMeanUserText
+{
+	position: absolute;
+	top: 120px;
+	left: 60px;
+	font-size: 1em;
+	z-index: 2;
+}
+
+#GongNengList
+{
+	position: absolute;
+	top: 180px;
+	left: 0px;
+	width: 100%;
+
+}
+
+#SettingButton
+{
+	color: #000000;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	width: 30px;
+	height: 30px;
+}
+
+#login
+{
+	position: absolute;
+	bottom: 80px;
+	left: 50px;
+	width: 50px;
+	height: 30px;
+}
+
+#reg
+{
+	position: absolute;
+	bottom: 80px;
+	left: 100px;
+	width: 50px;
+	height: 30px;
+}
+
+
+#tuichu
+{
+	font-size: 11px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 70px;
+	height: 30px;
+}
+
+
+
+#mainDIV
+{
+
+	top: 0px;
+	left: 0px;
+	height:610px;
+	width: 100%;
+	background:url(../img/loginbg.gif);	
+	display: none;
+}
+
+#loginform
+{
+	position:absolute;
+	width: 100%;
+	height: 300px;
+	top: 100px;
+	left: 0px;
+	display: none;
+}
+
+#myloginDiv
+{
+	position:absolute;
+	width: 100%;
+	height: 300px;
+	top: 100px;
+	left: 0px;
+}
+
+#loginButton
+{
+	width: 100px;
+}
+
+#loginmeizi
+{
+	position: absolute;
+	right: 0px;
+	bottom: -100px;
+}
+
+#regform
+{
+	position:absolute;
+	width: 100%;
+	height: 400px;
+	top: 100px;
+	left: 0px;
+
+}

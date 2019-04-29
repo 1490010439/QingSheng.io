@@ -1,0 +1,129 @@
+.mybutton
+{
+	text-decoration: none;
+	color: #FFF;
+	background-color: rgba(103,113,204,0);
+	border: 1px solid rgba(255,255,255,1);
+ 	border-radius: 3px;
+ 	box-shadow: 1px 1px 1px  rgba(123,123,255,0.7);
+}
+.mybutton:hover
+{
+	text-decoration: none;
+	color: #101010;
+	border: 1px solid rgba(0,0,0,1);		
+	background-color:rgba(62,164,190,0.8);	
+	box-shadow: 3px 3px 3px  rgba(123,123,255,0.7);
+}
+
+.mybutton:active
+{
+	text-decoration: none;
+	background-color:rgba(255,255,255,0.5);
+    color: rgba(62,164,190,0.8);
+	border: 1px solid rgba(0,0,0,0.3);		
+	box-shadow: 3px 3px 3px  rgba(123,123,255,0.3);
+}
+
+.list-group-item
+{
+  color: #262626;
+  border: 1px rgba(255,255,255,1) solid;
+  background: rgba(255,255,255,0);
+  text-decoration: none;
+}
+
+.list-group-item:hover
+{
+  background-color:rgba(62,164,190,0.8);
+  color: #222222;
+  text-decoration: none;
+  box-shadow: 2px 2px 2px  rgba(123,123,255,0.7);
+}
+
+.list-group-item:active
+{
+  background-color:rgba(255,255,255,0.9);
+  color: rgba(62,164,190,0.8);
+  text-decoration: none;
+}
+
+
+.myli
+{
+	text-align:center;    
+    list-style: none;
+}
+
+.mylia
+{
+  width: 30px;
+  height: 30px;
+  border-top: 1px #FFF solid;
+  border-bottom: 1px #FFF solid;
+  border-left: 1px #FFF solid;
+  background: rgba(0,0,0,0);
+  color: #FFF;
+  float: left;
+  text-decoration: none;
+}
+
+.mylia:hover
+{
+  background-color: rgba(123,113,204,0.8);
+  color: #222222;
+  text-decoration: none;
+}
+
+
+.mylitext
+{
+	position:relative;
+	top: 6px;
+	left: 6px;
+}
+
+.my_a
+{
+	color: #262626;
+	text-decoration: none;
+}
+
+.my_a:hover
+{
+	color:rgba(62,164,190,0.8);
+	text-decoration: none;
+	text-shadow: 3px 3px 3px   rgba(123,123,255,0.7);
+}
+
+.my_a:active
+{
+	color: #999999;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px   rgba(123,123,255,0.7);
+}
+
+
+.my_intput_text
+{
+	color: #FFF9EC;
+	background: rgba(255,255,255,0.2);
+	border: 1px 1px 1px  solid rgba(255,255,255,0.7);
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px rgba(123,123,255,0.7);
+	transform: scale(0);
+}
+
+.my_intput_text:hover
+{
+	background: rgba(0,0,0,0);
+	border: 1px solid rgba(123,123,255,0.7);
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px rgba(123,123,255,0.7);
+	transform: scale(1.5);
+}
+
+.myziti
+{
+	color: #FFF9EC;
+}

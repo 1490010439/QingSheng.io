@@ -1,0 +1,8 @@
+{
+"musiclist": [
+{ "musicName":"demo1" , "musicUrl":"music/demo1.mp3" },
+{ "musicName":"demo2" , "musicUrl":"music/demo2.mp3" },
+{ "musicName":"手写的从前" , "musicUrl":"music/01.mp3" }
+
+]
+}

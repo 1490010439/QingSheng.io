@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+@grid-columns:              12;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     768px;
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+
+@media (min-width: 0px) and (max-width: 400px)
+{
+
+#mycontents
+{
+	width: 300px;
+}
+
+
+}
+
+
+
+@media (min-width: 400px) and (max-width: 768px)
+{
+
+
+#mycontents
+{
+	width: 500px;
+}
+
+
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) and (max-width: 1050px) { 
+	
+
+
+#mycontents
+{
+	width: 950px;
+}
+
+
+}
+
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1050px) { 
+		
+#mycontents
+{
+	width: 1100px;
+}
+
+}
+
+
+.mytop
+{
+	color: #428BCA;
+	font-size: 15px;
+}
+
+.mytop:hover
+{
+	color: #000;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.myziti
+{
+	color: #428BCA;
+}
+
+.myziti:hover
+{
+	color: #2AABD2;
+}
+
+.mybody
+{
+	background:#FAFAFA;
+	width: 100%;
+}
+
+
+#contents
+{
+	width: 100%;
+}
+
+#addrizhiButton
+{
+	width: 150px;
+	height: 30px;
+	border: 1px #CCCCCC solid;
+	color: #CCC;
+	background: rgba(0,0,0,0);
+	border-radius: 3px;
+}
+
+#addrizhiButton:hover
+{
+	color: #000;
+	background: rgba(0,0,0,0.1);
+	border: 1px #000 solid;
+}
+
+.textInput
+{
+	width: 200px;
+	height: 30px;
+	border: 1px #000 solid;
+	color: #000;
+	background: rgba(0,0,0,0);
+	border-radius: 3px;
+}
+
+.textInput:hover
+{
+	background: rgba(0,0,0,0.2);
+	border: 1px #F5E79E solid;
+}
+
+

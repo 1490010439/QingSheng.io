@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<title>情圣网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="css/photoadd.css"/>
+		
+		
+		<script src="utf8-jsp/ueditor.config.js"></script>
+		<script src="utf8-jsp/ueditor.all.js"></script>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src='js/jquery-1.11.1.min.js'></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/photoadd.js"></script>
+
+</head>
+
+	</head>
+	<body class="mybody">
+			<center>
+				<h3 style="color: #FFFFFF;">新增图片</h3>
+			    <hr/>
+			</center>
+			
+			<div class="container-fluid">
+			   <div class="row">
+			   	  
+					   <div class="col-xs-12  col-sm-10 col-md-10 col-lg-10 
+					   	col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ">
+					   	<center>
+					   		<input  type="text" id="image" name="image" class="textInput"  placeholder="上传图片">
+								<a class="myziti" href="javascript:void(0)" onclick="upImage()">上传图片</a><br>
+								
+								<!-- 定义一个新编辑器,但是会隐藏它,因为只会用到图片上传 -->
+								<textarea id="uploadImage"></textarea>
+								<script type="text/javascript">
+							    var _editor = UE.getEditor("uploadImage",{
+							        initialFrameWidth:800,
+							        initialFrameHeight:300,
+							    });
+							
+							    _editor.ready(function (){
+							        //设置编辑器不可用(事实上不可以设置不可用...所以注释掉,以观后效)
+							        //_editor.setDisabled();
+							
+							        //隐藏编辑器,因为只使用上传功能
+							        _editor.hide();
+							
+							        //侦听图片上传
+							    _editor.addListener('beforeInsertImage',function(t,arg){
+							            //将图片地址赋给input
+							            $("#image").attr("value",arg[0].src);
+							            //将图片地址赋给img的src,实现预览
+							            $("#showImage").attr("src",arg[0].src);
+							        });
+							    });
+							    //上传dialog
+							    function upImage(){
+							        var myImage = _editor.getDialog("insertimage");
+							        myImage.open();
+							    }
+							</script>
+					   		
+					   	</center>
+					    
+					   	
+					   	
+					   </div>
+	  
+				</div>
+			</div>
+			
+			<hr/>	 
+			
+					  <!-- /最后bottom面块-->
+				  <div>
+				  <br/>
+		                  <div class=" container"> 
+		                     <div class="row">
+		                      <div class="col-xs-12 col-md-12">
+		                         <div style="color: #F1F2F2;">
+		                             <p align="center">
+		                            QingSheng &reg;情圣网
+		                            <br/>
+		                            电话：15684950036  &nbsp; QQ:1490010439
+		                            <br/>
+		                            该网站信息均来自网络收集，如有侵权，还请告知，吾立即删除。
+		                            <br/>
+		                            &copy;版权所有
+		                            </p>
+		                         </div>   
+		                      </div>
+		                   </div>
+		                 </div>
+		                 <br/>
+				  </div>
+			
+		    <div>
+		    	
+		    	
+		    
+		  
+		
+		 <div style="position:absolute; left:20px; top:20px;">
+			 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color: #FFF;"></span>
+			 <a href="photo.html" class="mytop">返回</a>
+		  </div>
+		  
+		  <div style="position:absolute; right:20px; top:20px;">
+			 <span class="glyphicon glyphicon-home" aria-hidden="true" style="color: #FFF;"></span>
+			 <a href="index.html" class="mytop">首页</a>
+		  </div>
+		  
+		  
+  
+	</body>
+</html>

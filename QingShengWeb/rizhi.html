@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<title>情圣网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="css/rizhi.css"/>
+		
+		
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src='js/jquery-1.11.1.min.js'></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/rizhi.js"></script>
+
+</head>
+
+	</head>
+	<body class="mybody" onload="initRiZhiList()">
+		<center>
+			<h3 style="color: #FFFFFF;">我的日志</h2>
+		    <hr/>
+		</center>
+		
+		<!--
+        	描述：搜索模块
+       -->
+		<center>
+			<input id="searchInput" type="text" value="" placeholder="搜索">
+			<button id="searchButton" type="button" onclick="searchRiZhi()">
+			  <span class="glyphicon glyphicon-search" aria-hidden="true" style="color:#FFF;"></span>
+			</button>
+		</center>
+
+		<br/>
+		<br/>
+		<!--
+        	描述：日志列表
+       -->
+		<div class="container-fluid">
+			<div class="row">
+				
+			  <div class="col-md-6">
+			  	<div id="myrizhilistDiv1" class="list-group">
+				</div>
+			  </div>
+			  
+			  <div class="col-md-6">
+			  	<div id="myrizhilistDiv2" class="list-group">
+				</div>
+			  </div>
+			  
+			</div>
+		</div>
+		
+		
+		<center style="clear:both;">
+    
+		  <ul class="myli">
+		    <li>
+		      <a href="#" aria-label="Previous" class="mylia" style="border-radius: 3px; width: 25px;">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#" class="mylia">1</a></li>
+		    <li><a href="#" class="mylia">2</a></li>
+		    <li><a href="#" class="mylia">3</a></li>
+		    <li><a href="#" class="mylia">4</a></li>
+		    <li><a href="#" class="mylia">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next" class="mylia" style="border-radius: 3px;  border-right: 1px #FFF solid; width: 25px;">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		  
+		  
+		   <!-- /最后bottom面块-->
+		  <div>
+		  <br/>
+		  <br/>
+		  <hr/>
+                  <div class=" container"> 
+                     <div class="row">
+                      <div class="col-xs-12 col-md-12">
+                         <div style="color: #F1F2F2;">
+                             <p align="center">
+                            QingSheng &reg;情圣网
+                            <br/>
+                            电话：15684950036  &nbsp; QQ:1490010439
+                            <br/>
+                            该网站信息均来自网络收集，如有侵权，还请告知，吾立即删除。
+                            <br/>
+                            &copy;版权所有
+                            </p>
+                         </div>   
+                      </div>
+                   </div>
+                 </div>
+                 <br/>
+		         <br/>
+		  </div>
+		  
+		</center>
+		
+
+		  <div style="position:absolute; left:20px; top:20px;">
+			 <span class="glyphicon glyphicon-home" aria-hidden="true" style="color: #FFF;"></span>
+			 <a href="index.html" class="mytop">首页</a>
+		  </div>
+		  
+		  <div style="position:absolute; right:20px; top:20px;">
+			 <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color: #FFF;"></span>
+			 <a href="rizhiadd.html" class="mytop">新增</a>
+		  </div>
+		  
+		  <div id="myzhezhao" onclick="closeSearchDiv()">
+
+		  </div>
+
+
+		  <div id="mySearchDiv">
+
+			  	<center>
+			  		<h3 style="color: #FFF;">搜索结果</h3>
+			  		<hr/>
+			  	</center>
+			  	
+			  	<div class="container-fluid">
+				<div class="row">
+					
+				  <div class="col-md-10 col-md-offset-1">
+				  	<div id="mySearchDivResult" class="list-group">
+					</div>
+				  </div>
+				  
+				</div>
+			   </div>
+		  	
+		  </div>
+		  
+<!--提示模态框 -->
+<div class="modal fade" id="mytishiModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      	<center>
+      		<h3 style="color: #EF6A6C;">提示<h3>
+      			<hr/>
+      		<h4>萌萌哒！并没有搜索到任何东西！</h4>
+      		<button id="tiaorubaidu" onclick="tiaobaidu()">跳入百度!</button>
+       </center>
+      </div>
+    </div>
+  </div>
+</div>
+		  
+		
+  
+	</body>
+</html>

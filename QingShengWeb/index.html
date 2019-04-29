@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<title>情圣网</title>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/animate.css" />
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src='js/jquery-1.11.1.min.js'></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/gungdong.js"></script>
+<script src="js/canvas_clock.js"></script>
+<script src="js/modernizr.2.5.3.min.js"></script>
+<script src="js/gongneng.js"></script>
+</head>
+
+<!--宽度判断-->
+<body onload="myonlode()">
+
+  <!--轮播图-->
+  <div id="mytubg" style=" opacity:1; position: relative;">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <!--<ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>-->
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/bg1.jpg" width="100%" />
+          <!--<div class="carousel-caption">
+                       自由
+          </div>-->
+        </div>
+        <div class="item">
+          <img src="images/bg2.jpg" width="100%" />
+          <!--<div class="carousel-caption">
+                       幻想
+          </div>-->
+        </div>
+        <div class="item">
+          <img src="images/bg3.jpg" width="100%" />
+          <!--<div class="carousel-caption">
+                       忘我
+          </div>-->
+        </div>
+ 
+      </div>
+    
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      </a>
+    </div>
+  </div>
+
+  <!--弹幕区-->
+  <div id="mydm"  style="width:90%; left:5%;position: relative ; top:60px;">
+       <div class="container">
+           <div id="dm">
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+            <font color="#CC99FF" id="10">哈哈哈哈！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="7">
+            <font color="#0099FF" id="11">你好，在下叶良辰！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+            <font color="#FF89CC" id="12">变身吧。皮卡丘！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%;" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="4">
+            <font color="#CC05FF" id="13">我也是醉了！</font>
+            </marquee>
+            
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="3">
+            <font color="#CC9923" id="14">猴子，快出来！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="7">
+            <font color="#CC8921" id="15">你是猴子请来的逗比吗！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+            <font color="#FF94CC" id="16">德玛西亚万岁！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="4">
+            <font color="#CC55CC" id="17">你的剑就是我的剑！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="5">
+            <font color="#FF11CC" id="18">加个buff！</font>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="30px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="9">
+            <font color="#CC0055" id="19">无聊啊！</font>
+              </marquee>
+
+          </div>
+               <br/>
+                <br/>
+                <center>
+                <input type="text" value="萌萌哒" id="dmtext" />
+                <br/>
+                <br/>
+                <input type="button" value="来一发" id="dmbutton" onclick="" style="background-color: rgba(255,250,250,0);"/>
+                </center>
+         </div>
+    </div>
+    
+  
+    <!--测试区-->
+  <div id="mybg1" style="width:100%;left:0px;position: relative; background:#2AABD2;">
+      <div class="container-fluid">
+      			<div class="row">
+      				
+      			  <div class="col-md-6">
+      			  	<center>
+      			  	<h3 style="color: #F5F5F5;">明星推荐</h3>
+      			  	<hr/>
+      			  	</center>
+      			  	<div id="mytushulistDiv1">
+									<center>
+										<img  src="images/timg.jpg" width="300px" />
+									</center>
+      			  		
+      			  		<p style="color: #F2F2F2;">
+      Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+      Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+      			  		</p>
+      				</div>
+      			  </div>
+      			  
+      			  <div class="col-md-6">
+      			  	<div id="mytushulistDiv2">
+      			  		<center>
+      			  			<h3 style="color: #F5F5F5;">热门歌曲</h3>
+      			  			<hr/>
+      			  		</center>
+      			  		<ul class="list-group">
+      					  <li class="list-group-item">
+      					  	告白气球
+      					  </li>
+									<li class="list-group-item">
+										青花瓷
+									</li>
+									<li class="list-group-item">
+										晴天
+									</li>
+									<li class="list-group-item">
+										发如雪
+									</li>
+									<li class="list-group-item">
+										夜曲
+									</li>
+									<li class="list-group-item">
+										告白气球
+									</li>
+									<li class="list-group-item">
+										青花瓷
+									</li>
+									<li class="list-group-item">
+										晴天
+									</li>
+									<li class="list-group-item">
+										发如雪
+									</li>
+									<li class="list-group-item">
+										夜曲
+									</li>
+									<li class="list-group-item">
+										不爱我就拉倒
+									</li>
+      					   
+      				  	</ul>
+      					
+      				</center>
+      				<br/>
+      				<br/>
+      				<br/>
+
+      				</div>
+      			  </div>
+      			  
+      			</div>
+      		   </div>
+      		   <br/>
+  </div>
+    
+  
+    <!--测试区-->
+  <div  id="mybg2"  style="width:100%; left:0px;position: relative ; top:0px;background: rgba(0,0,0,0);">
+       <div class="container animated bounceInLeft" style="margin-top:20px;">
+       	<br/>
+       	<br/>
+       <center>
+       	<br/>
+       	<br/>
+                  <h3> 木兰花·拟古决绝词柬友</h3>
+                  <h3>人生若只如初见，何事秋风悲画扇。</h3>
+                  <h3>等闲变却故人心，却道故人心易变。</h3>
+                  <h3>骊山语罢清宵半，泪雨霖铃终不怨。</h3>
+                  <h3>何如薄幸锦衣郎，比翼连枝当日愿。</h3>
+                  
+                     
+       </center>
+       <img src="gif/飞鸟2.gif" width="300px" height="200px" style="position: absolute;top: 100px;left: 30px;" class="animated bounceInLeft">
+       <img src="gif/飞鸟1.gif" width="300px" height="200px" style="position: absolute;top: 20px;right: 30px;" class="animated bounceInRight">
+        <img  src="gif/水墨5.gif" width="300px" height="200px" />
+        <br/>
+       	</div>
+  </div>
+
+  
+   <!--底部结尾-->
+  <div id="mybottom" style=" width:100%; height:610px; background-color:#FFFFFF;position: relative;top:150px;">  
+  	 <center style="padding-top: 50px;">
+  	   <img src="images/log.png" width="190px" height="78px"/>  	
+  	 </center>
+  	 
+  	 
+  	<!--时钟区-->
+  	 <center style="padding-top: 50px;">
+			 <canvas id="clock10_" width="200px" height="200px">
+		   </canvas>
+	   	</center>
+  	                    
+                  <!-- /最后bottom面块-->
+                  <div class=" container"> 
+                     <div class="row" style="margin-top:50px;">
+                      <div class="col-xs-12 col-md-12">
+                         <div>
+                             <p align="center">
+                            QingSheng &reg;情圣网
+                            <br/>
+                            电话：15684950036  &nbsp; QQ:1490010439
+                            <br/>
+                            该网站信息均来自网络收集，如有侵权，还请告知，吾立即删除。
+                            <br/>
+                            &copy;版权所有
+                            </p>
+                         </div>   
+                      </div>
+                   </div>
+                 </div>
+                 
+                 
+                <span id="tishi"></span> 
+  </div>
+
+   
+
+
+ <!--弹出模态框 -->
+<div class="modal fade" id="mytishiModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">登陆</h4>
+      </div>
+      <div class="modal-body" style="background-color: #CCCCCC;">
+      	<center>
+      		<div>
+      		<span>账号：</span><input type="text" id="loginzhanghao" style="border-radius: 5px;"/>
+      		<div>
+      		<br/>
+      		<div>
+      		<span>密码：</span><input type="password" id="loginpassword" style="border-radius: 5px;"/>
+      		<div>
+        </center>
+      </div>
+      <div class="modal-footer">
+        <button id="closemodal" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" onclick="login()">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!--网站导航栏 -->
+<div style=" position:fixed;top:0px; left:0px; width:100%;">
+<!-- /导航栏面块-->
+<nav id="myhead"  class="navbar navbar-default" role="navigation"   style="background:rgba(0,0,0,0);border: 0px;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html" style="font-size: 20px;color: #FFF;">首页</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="photoalbum.html"  id="myphone">个人相册</a></li>
+        <li><a href="rizhi.html"  id="myrizi">个人日志</a></li>
+        <li><a href="myshow.html"  id="myshow">个人展示</a></li>
+        <li><a href="mymusic.html"  id="mymusic">音乐空间</a></li>
+        <li><a href="QingshengBookWeb/index.html"  id="mybook">情圣图书</a></li>
+        <li><a href="QingShengBookApk/index.html"  id="mybookAPK">图书APP</a></li>
+      </ul>
+      
+
+      <ul class="nav navbar-nav navbar-right">
+      	 <li id="login_show"> <a  href="#" data-toggle="modal" data-target="#mytishiModal">联系我</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>	
+</div>
+
+
+  <div style="position:fixed; right:10px; bottom:10px;">
+	<a href="#"><img src="images/top.png" width="30px" height="30px"/></a>
+  </div>
+  
+  <div id="kongzhimean" style="position:fixed; left:20px; top:20px;" onclick="openmean()">
+  <img src="images/touxiang.png" alt="打开菜单" class="img-circle" width="40px" height="40px"/>
+  </div>
+  
+  <div id="zhezhao"  onclick="closemean()">
+  </div>
+  
+  <div id="mymean">
+  	
+  	<center id="mymeancenter" style="position:relative;top: 30px;">
+  		<img src="images/touxiang.png" alt="头像" class="img-circle" width="60px" height="60px"/>
+  		<br/>
+  		<br/>
+  		<font style="color: #F1F2F2;font-size: 15px;" >情哥哥</font>
+  		
+  		<br/>
+	  	<br/>
+	    <div class="mymeanbutton"><a href="photoalbum.html"  class="mymeantext">个人相册</a></div>
+	    <br/>
+      <div class="mymeanbutton"><a href="rizhi.html"  class="mymeantext">个人日志</a></div>
+      <br/>
+      <div class="mymeanbutton"><a href="myshow.html"  class="mymeantext">个人展示</a></div>
+      <br/>
+      <div class="mymeanbutton"><a href="mymusic.html" class="mymeantext">音乐空间</a></div>
+      <br/>
+      <div class="mymeanbutton"><a href="QingshengBookWeb/index.html"  class="mymeantext">情圣图书</a></div>
+      <br/>
+      <div class="mymeanbutton"><a href="QingShengBookApk/index.html" class="mymeantext">图书APP</a></div>
+  	</center>
+	  	
+  	
+  </div>
+
+</body>
+
+<script>
+
+   function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:500,
+			
+			// Height
+
+			height:500,
+
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+
+	 clockd10_={
+			  "indicate": true,
+			  "indicate_color": "#222",
+			  "dial1_color": "#666600",
+			  "dial2_color": "#81812e",
+			  "dial3_color": "#9d9d5c",
+			  "time_add": 1,
+			  "time_24h": true,
+			  "track": "#4b4b00",
+		};
+	 var c = document.getElementById('clock10_');
+	  cns10_ = c.getContext('2d');	
+	  clock_planets(200,cns10_,clockd10_);
+
+</script>
+
+</html>

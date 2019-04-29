@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8" />
+		<title>情圣图书</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/context.css"/>
+		<link rel="stylesheet" href="css/animate.css" />
+		
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/npm.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</head>
+	<body>
+		
+		<!--
+        	作者：1490010439@qq.com
+        	时间：2018-11-15
+        	描述：背景
+        -->
+		<div id="bg"></div>
+		<!--
+        	作者：1490010439@qq.com
+        	时间：2018-11-15
+        	描述：手机框图片
+        -->
+		<img id="phoneimg" src="img/miX3_2.png">
+		</img>
+		
+		<!--
+        	作者：1490010439@qq.com
+        	时间：2018-11-15
+        	描述：介绍文本
+        -->
+		<div id="text">
+			<h1 ">情圣图书手机版</h1>
+			<br/>
+			<h3 ">昨夜西风调碧树，独上高楼，望尽天涯路！</h3>
+			<br/>
+			<h3 ">衣带渐宽终不悔，为书消得人憔悴！</h3>
+			<br/>
+			<h3 ">众里寻他千百度，蓦然回首，她在灯火阑珊处！</h3>
+			<br/>
+			<h4 style="margin-left: 80%;">——钟盛勤</h4>
+		</div>
+		
+		<!--
+        	作者：1490010439@qq.com
+        	时间：2018-11-15
+        	描述：手机主要内容
+        -->
+		
+		<div id="Maincontext">
+		
+			
+		<!--标题栏-->	
+		 <div id="TitleBar">
+		 	<!--标题栏头像-->	
+		 	<img id="TouXiang" src="img/148.jpg" alt="头像" class="img-circle" width="40px" height="40px"
+		 		onclick="OpenSilderMean()">
+		 	<!--标题-->
+		 	<h3 id="Title">情圣图书</h3>
+		 	
+		 </div>
+		 
+		 
+		 <!--中间内容-->	
+		 <div id="MidcontextDiv">
+		 	
+		 	<img id="mainIMG" src="img/shu_2.png" width="100%" />
+		 	
+		 	<div id="mainDIV">
+		 		<div id="loginform">
+					<center>
+		 			<input type="text" maxlength="18" id="loginUserID"
+		 				class="my_intput_text animated bounceInLeft" placeholder="账号/学号" onblur="loginyanzheng()"/>
+		 			<br/>
+		 			<br/>
+		 			<input type="password" maxlength="18" id="loginUserpassword"
+		 				class="my_intput_text animated bounceInLeft" placeholder="密码" onblur="loginyanzheng()"/>
+		 			<br/>
+		 			<br/>	
+		 			<button id="loginButton" 
+		 				class="mybutton animated bounceInLeft" onclick="login()">
+		      	   	  登录
+		 	    </button>
+					</center>   
+		 	        <img id="loginmeizi" src="img/meizi1_3.png" class="animated bounceInRight"
+		 	        	height="200px"/>
+		 	        
+		 		</div>
+		 		<div id="regform">
+					<center>
+		 			<input id="regUserID" type="text" maxlength="18"  
+		 				class="my_intput_text animated bounceInLeft" placeholder="账号/学号" onblur="regyanzheng()"/>
+		 			<br/>
+		 			<br/>
+		 			<input id="regUserPassword" type="password" maxlength="18"  
+		 				class="my_intput_text animated bounceInLeft" placeholder="密码" onblur="regyanzheng()"/>
+		 			<br/>
+		 			<br/>	
+		 			<input id="regUserPhone" type="number" maxlength="18" 
+		 				class="my_intput_text animated bounceInLeft" placeholder="手机号" onblur="regyanzheng()"/>
+		 			<br/>
+		 			<br/>
+		 			<input id="regYanZhengMa" type="text" maxlength="18" style="width: 55px;" onblur="regyanzheng()"
+		 				class="my_intput_text animated bounceInLeft" placeholder="验证码"/>
+		 			
+		 			<button id="yanzhenButton" style="width: 95px;"
+		 				class="mybutton animated bounceInLeft" onclick="OpenToshi('验证码:520')" >
+		      	   	  获取验证码
+		 	       </button>
+		 			<br/>
+		 				<br/>
+		 			<button id="regButton" style="width: 100px;"
+		 				class="mybutton animated bounceInLeft" onclick="reg()">
+		      	   	  注册
+		 	       </button>
+					</center>
+		 		</div>
+		 		
+		 		<div id="mybookdesk">
+		 		 <img src="img/bookdesk.png" width="100%"/>	
+		 		</div>	
+		 		
+		 		<div id="myfenlei">
+		 		 <img src="img/fenlei.png" width="100%"/>	
+		 		</div>	
+		 		
+		 		<div id="mypaihan">
+		 		 <img src="img/paihang.png" width="100%"/>	
+		 		</div>
+		 		
+		 		<div id="myjieyue">
+		            
+			  		<ul class="list-group">
+					  <li class="list-group-item">
+					  	红楼梦 
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					   <li class="list-group-item">
+					  	西游记
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					  <li class="list-group-item">
+					  	三国演义
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					   <li class="list-group-item">
+					  	水浒传
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					   <li class="list-group-item">
+					  	c语言
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					   <li class="list-group-item">
+					  	人机交互
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					   <li class="list-group-item">
+					  	机器学习
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					  <li class="list-group-item">
+					  	深度学习
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					   <li class="list-group-item">
+					  	人工智能
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					  </li>
+					   <li class="list-group-item">
+					   java编程思想
+					  	<button id="jieyuebutton" class="mybutton">
+					  		借阅
+					  	</button>
+					</ul>
+					<hr/>
+					<center style="clear:both;">
+					<ul class="myli">
+				    <li>
+				      <a href="#" aria-label="Previous" class="mylia" style="border-radius: 3px; width: 25px;">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#" class="mylia">1</a></li>
+				    <li><a href="#" class="mylia">2</a></li>
+				    <li><a href="#" class="mylia">3</a></li>
+				    <li><a href="#" class="mylia">4</a></li>
+				    <li><a href="#" class="mylia">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next" class="mylia" style="border-radius: 3px;  border-right: 1px #FFF solid; width: 25px;">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				  
+				  <button class="mybutton" style="width: 100px;height: 30px;">
+				  	更多图书
+				  	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				  </button>
+				  
+				</center>
+		 		</div>
+		 		
+		 	</div>
+		 	
+		 	<!--仿安卓土司-->
+			<div id="Toshi" class="animated bounceInDown" onclick="CloseToshi()">
+				<span id="ToshiText">登录成功</span>
+			</div>
+			
+		 </div>
+
+		 
+		 <!--遮罩-->
+		 <div id="ZhengZhao" onclick="CloseSilderMean()"></div>
+		
+		<!--侧滑菜单-->
+		 <div id="SilderMean">
+		 	 <!--头像背景-->
+		 	<div id=TouxiangBg></div>
+		 	<!--头像-->
+		 	<img id="SilderMeanTouxiang" src="img/148.jpg" alt="头像" class="img-circle" width="60px" height="60px">
+			<!--用户名字-->
+		 	<font id="SilderMeanUserName" color="floralwhite">萌妹子</font>	
+			<!--用户签名-->
+			<p id="SilderMeanUserText" color="floralwhite">感觉自己萌萌哒...</p>	
+			
+			<!--列表模块-->
+			<div id="GongNengList">
+				<ul class="list-group">
+					  <li class="list-group-item" onclick="openmainDIV(3)">
+					  	个人书架
+					  </li>
+					  
+					  <li class="list-group-item" onclick="openmainDIV(4)">
+					  	图书分类
+					  </li>
+					  
+					  <li class="list-group-item" onclick="openmainDIV(5)">
+					  	图书排行
+					  </li>
+					  
+					  <li class="list-group-item" onclick="openmainDIV(6)">
+					  	借阅图书
+					  </li>
+					  
+					  <li class="list-group-item">
+					  	图书论坛
+					  </li>
+					  
+					  <li class="list-group-item">
+					  	捐赠图书
+					  </li>
+					  
+			
+				</ul>
+			</div>
+		 	
+		 	<button id="SettingButton" class="mybutton">
+		 	<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+		 	</button>
+		 	<!--描述：animated bounceOutLefts -->
+		    <a id="login" class="my_a" onclick="openmainDIV(1)">登录</a>
+		    <a id="reg" class="my_a" onclick="openmainDIV(2)">注册</a>
+		    <a id="tuichu" class="my_a">退出账号</a>
+		    
+		 </div>
+			
+			
+		</div>
+		
+		<!--
+        	作者：1490010439@qq.com
+        	时间：2018-11-15
+        	描述：手机主要内容结束
+        -->
+		
+		
+		
+		<!--
+        	作者：1490010439@qq.com
+        	时间：2018-11-15
+        	描述：开启手机按钮
+        -->
+		<button  class="mybutton" id="startButton" onclick="OpenMaincontext()">
+		<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+		</button>
+		
+	</body>
+</html>

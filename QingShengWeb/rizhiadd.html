@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<title>情圣网</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="css/rizhiadd.css"/>
+		
+		<script src="utf8-jsp/ueditor.config.js"></script>
+		<script src="utf8-jsp/ueditor.all.js"></script>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src='js/jquery-1.11.1.min.js'></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/rizhiadd.js"></script>
+
+</head>
+
+	</head>
+	<body class="mybody" >
+			<center>
+				<h3 style="color: #428BCA;">新增日志</h2>
+			    <hr style="color: #000;"/>
+
+
+			    <div class="container-fluid" id="mycontents">
+				<div class="row">
+				  <div class="col-md-10 col-md-offset-1">
+				  	     
+				  	     <br/>
+				  	     <font>标题:</font><input id="myTextHead" class="textInput" 
+				  	     	type="text" value="" placeholder="标题">
+				  	     <br/>  
+				  	     <br/>
+				  	     <font>作者:</font><input  id="myAuthor" class="textInput" 
+				  	     	type="text" value="" placeholder="作者">
+				  	     <br/>  
+				  	     <br/>
+				    	 <textarea id="contents" name="contents"></textarea>
+						<script type="text/javascript" charset="utf-8">
+						var editor = new baidu.editor.ui.Editor();
+						editor.render("contents");
+						</script>
+				  </div>
+				</div>
+				</div>
+							    
+			</center>
+			
+			
+			<center>
+			<hr style="color: #000;"/>
+			<button id="addrizhiButton" type="button" onclick="addRiZhi()">
+			 新增
+			</button>
+			<br/>
+			<br/>
+			<br/>
+			</center>
+			
+			
+			
+		
+		  <div style="position:absolute; left:20px; top:20px;">
+			 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color: #428BCA;"></span>
+			 <a href="rizhi.html" class="mytop">返回</a>
+		  </div>
+		
+
+		  <div style="position:absolute; right:20px; top:20px;">
+			 <span class="glyphicon glyphicon-home" aria-hidden="true" style="color: #428BCA;"></span>
+			 <a href="index.html" class="mytop">首页</a>
+		  </div>
+		  
+		<!--提示模态框 -->
+		<div class="modal fade" id="mytishiModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      	<center>
+		      		<h3 style="color: #EF6A6C;">新增成功<h3>
+		      			<hr/>
+		       </center>
+		       <div id="tishitext"></div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+  
+	</body>
+</html>

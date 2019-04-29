@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<title>情圣网-音乐</title>
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-slider.css" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap-slider.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/mymusic.css"/>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src='js/jquery-1.11.1.min.js'></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mymusic.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+
+
+
+<script>
+
+var maxmusictime=0;
+var timer1;
+var icondeg=0;
+var musiccurrentTime=0;
+var musictime=0
+var mymusictime;
+var mymusicindex;
+var mymusicMaxindex;
+
+function  getmusiccurrentTime()
+{
+	//duration 属性返回当前音频/视频的长度，以秒计。
+	 maxmusictime=document.getElementById("musicvoid").duration;
+	 
+	 //refreshsilder(maxmusictime);
+	 
+	//currentTime 属性设置或返回音频/视频播放的当前位置（以秒计）。
+	 musiccurrentTime=document.getElementById("musicvoid").currentTime; 
+	var baifen=musiccurrentTime/maxmusictime;
+	baifen=baifen*100;
+	baifen=baifen+"%";
+	document.getElementById("jindutiao").style.width=baifen;
+	
+	$('#musicicon').css( {"transform":"rotateZ("+icondeg+"deg)"});
+	
+		icondeg+=30;
+	
+
+    //滑动条的显示
+//	$("#ex4").slider({
+//     	formatter: function (value) {
+//     	var fen=value/60;
+//     	var miao=value%60;
+//     	
+//     	fen=Math.floor(fen);
+//     	miao=miao.toFixed(1); 
+//     	
+//     	if(fen<1)
+//     	{
+//     		return miao+"秒";
+//     	}
+//     	else
+//     	{
+//     		return fen+'分' + miao+"秒";
+//     	}
+//     	
+//      }
+//	
+//  });
+	
+}
+
+
+function startmusic()
+{
+	//获取当前下标
+	mymusicindex=$("#musicindex").val();
+	
+	
+	    //获取列表的最大数
+		var ContmymusicListName = document.getElementsByClassName('mymusicListName');
+		//alert(ContmymusicListName.length);
+		//将最大数存储
+		$("#musicMaxindex").val(ContmymusicListName.length);
+		mymusicMaxindex=ContmymusicListName.length;
+	
+	//如果当前播放音乐下标为-1，说明是第一次播放，就加载列表的第一首歌
+	if(mymusicindex==-1)
+	{
+		mymusicindex=0;
+		
+		//更新当前下标
+	   $("#musicindex").val(0);
+
+		//获取第一首歌的信息
+	    var musicListName=$("#musicListName"+mymusicindex).val();
+	    var musicListUrl=$("#musicListUrl"+mymusicindex).val();
+	    
+	        document.getElementById("musicvoid").pause();
+			document.getElementById("musicvoid").currentTime=0;	
+			document.getElementById("jindutiao").style.width="0";
+			document.getElementById("musicvoid").src=musicListUrl;
+			document.getElementById("musicName").innerHTML=musicListName;
+	}
+	
+	musictime=document.getElementById("musicvoid").duration;
+	timer1=window.setInterval(getmusiccurrentTime,500);
+	
+	//refreshsilder(musictime);
+	
+	document.getElementById("musicvoid").play();
+	
+
+
+}
+
+
+function pausemusic()
+{
+	window.clearInterval(timer1);
+	//alert("暂停");
+	document.getElementById("musicvoid").pause();
+}
+
+function stopmusic()
+{
+
+	window.clearInterval(timer1);
+	//alert("停止");
+	icondeg=0;
+	$('#musicicon').css( {"transform":"rotateZ(0deg)"});
+	
+	document.getElementById("musicvoid").currentTime=0;	
+	document.getElementById("jindutiao").style.width="0";
+
+
+	document.getElementById("musicvoid").load();
+	
+	$("#mysilder").fadeOut();
+
+	
+}
+
+function nextmusic()
+{
+	
+	//获取当前下标
+	mymusicindex=$("#musicindex").val();
+	//把字符串转为数字
+	mymusicindex=parseInt(mymusicindex);
+	
+	//必须下标大于等于0，才能执行
+	if(mymusicindex>=0)
+	{
+			//如果当前是最后一首歌，就回到第一首
+			if(mymusicindex==mymusicMaxindex-1)
+			{
+				mymusicindex=0;
+			}
+			else
+			{
+				//当前下标加一
+			  mymusicindex=mymusicindex+1;
+			}
+			
+			//将下标存储在musicindex中
+			$("#musicindex").val(mymusicindex);
+			
+			
+			
+		   // 获取下一首歌的信息
+			var musicListName=$("#musicListName"+mymusicindex).val();
+			var musicListUrl=$("#musicListUrl"+mymusicindex).val();
+			    
+			document.getElementById("musicvoid").pause();
+			document.getElementById("musicvoid").currentTime=0;	
+			document.getElementById("jindutiao").style.width="0";
+			document.getElementById("musicvoid").src=musicListUrl;
+			document.getElementById("musicName").innerHTML=musicListName;
+			document.getElementById("musicgechi").innerHTML="第"+mymusicindex+"首歌";
+			
+			window.clearInterval(timer1);
+			
+			//进行播放
+			startmusic();	
+			
+			$("#mysilder").fadeOut();
+	}
+}
+
+
+function lastmusic()
+{
+	
+	//获取当前下标
+	mymusicindex=$("#musicindex").val();
+	//把字符串转为数字
+	mymusicindex=parseInt(mymusicindex);
+	
+	//必须下标大于等于0，才能执行
+	if(mymusicindex>=0)
+	{
+			//如果当前是第一首歌，就回到最后一首
+			if(mymusicindex==0)
+			{
+				mymusicindex=mymusicMaxindex-1;
+			}
+			else
+			{
+				//当前下标加一
+			  mymusicindex=mymusicindex-1;
+			}
+			
+			//将下标存储在musicindex中
+			$("#musicindex").val(mymusicindex);
+			
+			
+		   // 获取下一首歌的信息
+			var musicListName=$("#musicListName"+mymusicindex).val();
+			var musicListUrl=$("#musicListUrl"+mymusicindex).val();
+			    
+			document.getElementById("musicvoid").pause();
+			document.getElementById("musicvoid").currentTime=0;	
+			document.getElementById("jindutiao").style.width="0";
+			document.getElementById("musicvoid").src=musicListUrl;
+			document.getElementById("musicName").innerHTML=musicListName;
+			document.getElementById("musicgechi").innerHTML="第"+mymusicindex+"首歌";
+			
+			
+			window.clearInterval(timer1);
+			
+			//进行播放
+			startmusic();	
+			
+			$("#mysilder").fadeOut();
+	}
+}
+
+var myvalue;
+function tiaozhuangmusic(myvalue)
+{
+	//alert(myvalue);
+	 //document.getElementById("musicvoid").pause();
+	 document.getElementById("musicvoid").currentTime=myvalue;
+	 document.getElementById("musicvoid").play();
+     //document.getElementById("musicvoid").fastSeek(myvalue);
+      $("#myex4").refresh();
+}
+
+function refreshsilder(mymusictime)
+{
+		$("#ex4").slider({
+	       max:musictime,
+	       min:0,
+	       value:0,
+	   });
+       $("#mysilder").fadeIn();
+}
+
+
+</script>
+
+</head>
+    
+<body onload="initMusicList()">
+
+
+  <div style="background-image: url('images/x1.jpg');background-size:100% 100%;width: 100%;height:750px;">
+    
+    <!--弹幕区-->
+  <div style="width:90%; left:5%;position: relative;top:70px;">
+       <div class="container">
+           <div >
+            <marquee behavior="scroll" direction="left" width="100%" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+              <img src="images/137.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">手写的从前</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="7">
+              <img src="images/138.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">青花瓷</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+              <img src="images/139.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">告白气球</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%;" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="4">
+              <img src="images/142.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">牛仔很忙</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="3">
+              <img src="images/144.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">一点点</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+
+            <marquee behavior="scroll" direction="left" width="100%" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="6">
+              <img src="images/150.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">晴天</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="4">
+              <img src="images/152.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">断了的弦</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+            
+            <marquee behavior="scroll" direction="left" width="100%" height="50px;" loop="-1"  onmouseover=this.stop() onmouseout=this.start() scrollamount="5">
+              <img src="images/155.jpg" class="img-circle" width="50px" height="50px" />
+              <font color="#FFF">楓</font>
+              <span style="color:#FFF;" class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+            </marquee>
+            
+            
+          
+
+          </div>
+               <br/>
+               <br/>
+
+               <center>
+               	
+               	<font color="#73e9c3" style="font-size: 19px;" id="musicgechi">感觉自己萌萌哒！</font>
+               	<br/>
+               	<br/>
+                <span id="musicicon" class="glyphicon glyphicon-music" aria-hidden="true" style="color: #F1F2F2;"></span>
+                &nbsp;
+               <font color="#FFF" id="musicName">我的音乐</font>
+               <br/>
+               <br/>
+               <div class="progress" style="height: 10px;">
+				   <div id="jindutiao" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:100%"  >
+					    <span class="sr-only">100% Complete</span>
+				   </div>
+				</div>
+
+	                <button type="button" class="btn btn-default btn-lg" style="background:rgba(255,250,250,0);">
+						  <span class="glyphicon glyphicon-step-backward mybutton1" aria-hidden="true"   onclick="lastmusic()"></span>
+					</button>
+					
+					 <button type="button" class="btn btn-default btn-lg" style="background:rgba(255,250,250,0);">
+					      <span class="glyphicon glyphicon glyphicon-pause mybutton1" aria-hidden="true"   onclick="pausemusic()"></span>
+						  <span class="glyphicon glyphicon-play mybutton1" aria-hidden="true" onclick="startmusic()"></span>
+						  <span class="glyphicon glyphicon glyphicon-stop mybutton1" aria-hidden="true" onclick="stopmusic()"></span>
+					</button>
+					
+					 <button type="button" class="btn btn-default btn-lg" style="background:rgba(255,250,250,0);">
+						  <span class="glyphicon glyphicon-step-forward mybutton1" aria-hidden="true" onclick="nextmusic()"></span>
+					</button>
+	                
+	               <br/>
+	               <br/>
+               
+                 <div id="mysilder" style="position:absolute;bottom: -19px;left:10%;width:80%;height: 20px;display: none;"> 
+				     <input id="ex4" type="text" data-slider-id="myex4" style="width: 100%;display: none;"/>
+				</div>
+				
+                </center>
+                
+                <div id="mymusic">
+                   <audio  id="musicvoid"  src="music/demo1.mp3"  style="width:1px;height:1px;">
+					Your browser does not support the audio element.
+					</audio>
+                </div>
+                
+              
+                
+         </div>
+    </div>
+    
+  
+  
+
+  </div>
+
+  <div style="position:fixed; right:20px; top:20px;">
+	 <span class="glyphicon glyphicon-home" aria-hidden="true" style="color: #F1F2F2;"></span>
+	 <a href="index.html" id="myshouye">首页</a>
+  </div>
+  
+   <div id="kongzhimusicmean" style="position:fixed; left:20px; top:20px;" onclick="openmean()">
+    <span class="glyphicon glyphicon-th-list" aria-hidden="true" style="color: #F1F2F2;"></span>
+  </div>
+  
+  <div id="musiczhezhao"  onclick="closemean()">
+  </div>
+  
+  <div id="musicmymean">
+
+  <center id="musicmeancenter">
+  	<br/>
+  	<font style="color: #F1F2F2;font-size: 15px;">播放列表</font>
+  	<hr/>
+  	  <div style="height: 500px;overflow-y: auto;">
+	  <ul id="musiclist" class="list-group">
+	  	
+	  </ul>
+	  </div>
+  </center>
+  	
+  </div>
+  
+  <input id="musicindex" type="hidden" value="-1" />
+  <input id="musicMaxindex" type="hidden" value="0" />
+
+  <script>
+  	
+    $("#ex4").slider({
+       max:100,
+       min:0,
+       step:0.01,
+       value:0,
+    });
+    
+    $('#ex4').on('slideStop', function (slideEvt) {
+    	var myvalue= slideEvt.value;
+        tiaozhuangmusic(myvalue);
+
+    });
+    
+  </script>
+  
+
+
+
+
+</body>
+
+</html>

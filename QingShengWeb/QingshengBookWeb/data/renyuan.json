@@ -1,0 +1,38 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 10,
+	"data": [
+		{
+			"renyuanid": 20160304101,
+			"renyuanname": "李大叔",
+			"renyuanzhiwei": "图书馆馆长",
+			"renyuanage": "56",
+			"renyuanworkerage": "20",
+			"renyuanqingjia": "0",
+			"renyuankuanggong": "0",
+			"caozuo":"<input type=\"checkbox\" />"
+		}, 
+	    {
+			"renyuanid": 20160304102,
+			"renyuanname": "张大妈",
+			"renyuanzhiwei": "图书管理员",
+			"renyuanage": "40",
+			"renyuanworkerage": "10",
+			"renyuanqingjia": "20",
+			"renyuankuanggong": "0",
+			"caozuo":"<input type=\"checkbox\" />"
+		},
+		{
+			"renyuanid": 20160304103,
+			"renyuanname": "王小妹",
+			"renyuanzhiwei": "图书管理员",
+			"renyuanage": "20",
+			"renyuanworkerage": "1",
+			"renyuanqingjia": "5",
+			"renyuankuanggong": "1",
+			"caozuo":"<input type=\"checkbox\" />"
+		}
+	
+	]
+}
